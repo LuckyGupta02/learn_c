@@ -1,0 +1,104 @@
+#include <stdio.h>
+
+int Leave(salary,leave,month,year){
+  int x;
+  switch(month)
+    {
+    case 1:
+      x=(salary/31)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+
+      case 2:
+      if(year%4==0)
+      {
+         x=(salary/28)*leave;
+      printf("Leave : %d\n\n",x);
+      }
+      else{
+         x=(salary/29)*leave;
+      printf("Leave : %d\n\n",x);
+      }
+    break;
+      case 3:
+      x=(salary/31)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      case 4:
+      x=(salary/30)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      case 5:
+      x=(salary/31)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      case 6:
+      x=(salary/30)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      case 7:
+      x=(salary/31)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      case 8:
+      x=(salary/31)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      case 9:
+      x=(salary/31)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      case 10:
+      x=(salary/31)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      case 11:
+      x=(salary/31)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      case 12:
+      x=(salary/31)*leave;
+      printf("Leave : %d\n\n",x);
+    break;
+      default:
+      printf("Invalid month..\n\n");
+      
+      
+    }
+    
+    
+  x=(salary/30);
+  
+}
+
+int main(void) {
+  char name[20];
+  int salary, month, leave, tds, year,ctc,ftds,fsalary,date;
+  printf("Name :\n");
+  fgets(name, 20, stdin);
+  printf("Salary : \n");
+  scanf("%d", &salary);
+  printf("Tds :\n ");
+  scanf("%d", &tds);
+  printf("Leave :\n ");
+  scanf("%d", &leave);
+  printf("Month :\n ");
+  scanf("%d", &month);
+  printf("Year :\n ");
+  scanf("%d", &year);
+
+  printf("--------------********---------------\n");
+
+  printf("Employee Name : %s\n ",name);
+  printf("CTC[12 month]%d\n\n",12*salary);
+  printf("Monthly Salary : %d\n\n",salary);
+  Leave(salary,leave,month,year);
+  ftds=(2*salary)/100;
+  printf("Tds amount : %d\n\n",ftds);
+  fsalary=salary-(leave=ftds);
+  printf("Final Pay Salary : %d\n\n",fsalary);
+  printf("Date : %d / %d",month,year);
+
+
+  return 0;
+}
